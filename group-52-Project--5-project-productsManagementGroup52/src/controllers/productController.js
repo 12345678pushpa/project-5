@@ -369,7 +369,7 @@ const getProductsById = async (req, res) => {
       }
   
       if (isFreeShipping || isFreeShipping == "") {
-        if (!Validation.isValidValue(isFreeShipping))
+        if (!Validation.isValid(isFreeShipping))
           return res.status(400).send({ status: false, message: "Please provide isFreeShipping" });
   
         if (["true", "false"].indexOf(isFreeShipping) == -1)
